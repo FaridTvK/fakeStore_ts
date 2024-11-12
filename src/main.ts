@@ -126,6 +126,28 @@ sortInput.addEventListener("change", () => {
   }
 
   showProducts(sortedProducts)
+})
 
+
+
+categoriesBtn.forEach((btn: HTMLButtonElement) => {
+  btn.addEventListener("click", () => {
+    const category = btn.textContent?.trim().toLowerCase()
+    console.log(category);
+    let relateApiURL = ""
+
+    if (category === "men's clothing") {
+      relateApiURL = `${BASE_URL_PRODUCTS}/category/men's%20clothing`
+    } else if (category === "electronics") {
+      relateApiURL = `${BASE_URL_PRODUCTS}/category/electronics`
+    } else if (category === "jewelery") {
+      relateApiURL = `${BASE_URL_PRODUCTS}/category/jewelery`
+    } else if (category === "women's clothing") {
+      relateApiURL = `${BASE_URL_PRODUCTS}/category/women's%20clothing`
+    }
+
+    fetchAllProducts(relateApiURL)
+
+  })
 })
 
