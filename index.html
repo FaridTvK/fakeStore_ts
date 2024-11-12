@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake Store</title>
+</head>
+
+<body>
+  <h1>SuperFakeStore</h1>
+  <nav>
+    <input type="text" id="search" placeholder="Search by title" />
+    <select id="sort">
+      <option value="">Sort by</option>
+      <option value="highToLow">High to Low</option>
+      <option value="lowToHigh">Low to High</option>
+    </select>
+    <div>
+      <p>Filter by Categories</p>
+      <button>Men's Clothing</button>
+      <button>Jewelery</button>
+      <button>Electronics</button>
+      <button>Women's clothing</button>
+    </div>
+  </nav>
+  <main id="output-products"></main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
